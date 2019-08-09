@@ -36,10 +36,8 @@ public class AppStartupRunner implements ApplicationRunner {
         System.out.println("Increment counter");
         counter++;
         
-        System.out.println("===== ENV VARIABLES =====");
-	    dumpVars(System.getenv());
-	    
-        
+//        System.out.println("===== ENV VARIABLES =====");
+//	    dumpVars(System.getenv());
         
 		ServiceInstance instance = this.discoveryClient.getInstances("intermediate").get(0);
 		List<ServiceInstance> instances = this.discoveryClient.getInstances("intermediate");
