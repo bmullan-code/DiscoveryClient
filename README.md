@@ -7,7 +7,8 @@ export VCAP_APPLICATION="{'app.Id':'foo'}"
 java -jar target/DiscoveryClient-0.0.1-SNAPSHOT.jar --server.port=9006 --spring.profiles.active=cloud
 
 
-# vcap.json (from appmanager env variables)
+## vcap.json (from appmanager env variables)
+```
 {
       "p-service-registry": [
         {
@@ -34,3 +35,5 @@ java -jar target/DiscoveryClient-0.0.1-SNAPSHOT.jar --server.port=9006 --spring.
         }
       ]
 }
+```
+
