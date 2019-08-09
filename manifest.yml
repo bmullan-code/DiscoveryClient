@@ -1,0 +1,14 @@
+applications:
+- name: trace-client
+  path: target/DiscoveryClient-0.0.1-SNAPSHOT.jar
+  disk_quota: 1G
+  instances: 1
+  memory: 1G
+  buildpack: java_buildpack_offline
+  random-route: true
+  stack: cflinuxfs3
+  services:
+  - spring-cloud-registry
+  - rabbit-mq
+  env:
+    SPRING_APPLICATION_NAME: traceclient
